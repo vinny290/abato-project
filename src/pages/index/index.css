@@ -1,0 +1,32 @@
+:root {
+	--primary: #58af00;
+	--primary-hover: #4d9900;
+	--primary-hover-light: hsl(92, 93%, 89%);
+	--background-button-second: #6d6d6d;
+	--background-button-second-hover: rgb(90, 90, 90);
+	--primary-text: #313131;
+	--primary-text-light: #fbfbfb;
+	--secondary-text: #888888;
+
+	--border-color: #bfbfbf;
+
+	--footer-primary-text: #1a76cb;
+	--footer-background-color: #ededed;
+}
+
+.margin {
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+.width {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+.GroupTextInput {
+	max-width: 286px;
+}
+.header {
+	z-index: 10;
+}

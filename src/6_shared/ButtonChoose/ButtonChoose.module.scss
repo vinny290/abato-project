@@ -1,0 +1,29 @@
+.button {
+	border-radius: 5px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+	transition: background 0.25s;
+	color: var(--primary-text-light);
+}
+.base {
+	height: 48px;
+}
+.mobile {
+	height: 22px;
+	font-size: 15px;
+}
+.active {
+	background-color: var(--primary);
+	&:hover {
+		background-color: var(--primary-hover);
+	}
+}
+.no-active {
+	background-color: var(--primary-text-light);
+	color: var(--primary);
+	&:hover {
+		background-color: var(--primary-hover-light);
+	}
+}

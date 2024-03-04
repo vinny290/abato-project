@@ -1,0 +1,36 @@
+.selectedCity {
+	cursor: pointer;
+	img {
+		margin-right: 4px;
+		width: 24px;
+		height: 24px;
+	}
+	.whiteText {
+		color: var(--primary-text-light);
+		font-size: 16px;
+	}
+}
+.dropdown {
+	.cityList {
+		max-height: 150px;
+		overflow-y: auto;
+		/* Стилизация ползунка прокрутки */
+		&::-webkit-scrollbar {
+			width: 8px; /* Ширина ползунка */
+			background-color: var(--footer-background-color); /* Цвет фона */
+			border-radius: 4px;
+		}
+
+		/* Стилизация ползунка */
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--primary); /* Цвет ползунка */
+			border-radius: 4px; /* Закругление углов ползунка */
+		}
+		.cityItem {
+			margin-bottom: 10px;
+		}
+		.selectedCity {
+			color: var(--primary);
+		}
+	}
+}

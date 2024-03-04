@@ -10,7 +10,7 @@ import ButtonBase from '../../6_shared/Buttons/ButtonBase'
 import { InputFltr } from '../../6_shared/Inputs/InputFiltr/InputFiltr'
 import InputReg from '../../6_shared/Inputs/InputsReg/InputReg'
 import TextInputLR from '../../6_shared/Inputs/TextInput/TextInput'
-import './index.css'
+import '../main.css'
 
 export { Page }
 
@@ -42,10 +42,17 @@ function Page() {
 					</ButtonBase>
 				</div>
 				<div className='margin'>
-					<ChooseModule width='380px' height='base' />
+					<ChooseModule
+						width='380px'
+						height='base'
+						options={['Все', 'Новые', 'С пробегом']}
+					/>
 				</div>
 				<div className='margin'>
-					<ChooseModuleMobile width='232px' />
+					<ChooseModuleMobile
+						width='290px'
+						options={['Все', 'Новые', 'С пробегом']}
+					/>
 				</div>
 				<div className='margin'></div>
 				<h1>Инпуты</h1>

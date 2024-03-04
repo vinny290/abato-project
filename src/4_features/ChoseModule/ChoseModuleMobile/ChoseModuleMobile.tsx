@@ -1,15 +1,23 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import cn from 'classnames'
+import { useState } from 'react'
 import ButtonChoose from '../../../6_shared/ButtonChoose/ButtonChoose'
 import styles from './ChoseModuleMobile.module.scss'
 import { ChooseModuleMobileProps } from './ChoseModuleMobile.props'
+
 export default function ChooseModuleMobile({
 	width,
 	height = 'mobile',
+	options,
 }: ChooseModuleMobileProps) {
 	const chooseModuleStyles: React.CSSProperties = {
 		width,
 	}
+
+	const [selectedButton, setSelectedButton] = useState(options[0]) // Устанавливаем первую опцию по умолчанию
+	const handleButtonClick = (buttonName: string) => {
+		setSelectedButton(buttonName)
+	}
+
 	return (
 		<div
 			style={chooseModuleStyles}
@@ -17,15 +25,18 @@ export default function ChooseModuleMobile({
 				[styles['mobile']]: height === 'mobile',
 			})}
 		>
-			<ButtonChoose width='52px' height='mobile'>
-				Все
-			</ButtonChoose>
-			<ButtonChoose width='60px' height='mobile' color='no-active'>
-				Новые
-			</ButtonChoose>
-			<ButtonChoose width='100px' height='mobile' color='no-active'>
-				С пробегом
-			</ButtonChoose>
+			{/* Динамически генерируем кнопки на основе переданных переменных */}
+			{options.map(option => (
+				<ButtonChoose
+					key={option} // Важно добавить уникальный ключ для каждой кнопки
+					width={`${100 / options.length}%`} // Распределение равномерно по ширине
+					height='mobile'
+					color={selectedButton === option ? 'active' : 'no-active'}
+					onClick={() => handleButtonClick(option)}
+				>
+					{option}
+				</ButtonChoose>
+			))}
 		</div>
 	)
 }

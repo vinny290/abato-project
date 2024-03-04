@@ -6,3 +6,13 @@
 	box-shadow: 15px 20px 45px 0px rgba(233, 233, 233, 0.041);
 	padding: 13px;
 }
+.input-container {
+	position: relative;
+}
+.eye-icon {
+	position: absolute;
+	top: 50%;
+	right: 10px; /* Adjust the right position as needed */
+	transform: translateY(-50%);
+	cursor: pointer;
+}

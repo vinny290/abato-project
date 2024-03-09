@@ -1,0 +1,82 @@
+.modal {
+	display: none;
+}
+.mobile_btn {
+	display: none;
+}
+@media screen and (max-width: 1090px) {
+	.modal {
+		display: flex;
+		position: fixed;
+		width: 320px;
+		height: 300px;
+		padding: 30px 25px;
+		border-radius: 10px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -85%);
+		background-color: var(--primary-text-light);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.746);
+		z-index: 1000;
+		padding: 20px;
+		opacity: 0; /* Начальная непрозрачность */
+		transition: opacity 0.3s ease; /* Плавное изменение непрозрачности */
+		&-close {
+			position: absolute;
+			top: 10px; /* Выравнивание по верхнему краю */
+			right: 10px; /* Прижатие к правому краю */
+			cursor: pointer;
+		}
+		&.active {
+			opacity: 1; /* Прозрачность 100% при отображении */
+		}
+		.menu {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			display: inline-block;
+			&-account {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 20px;
+				margin-bottom: 20px;
+				&-button {
+					width: 60px;
+					height: 30px;
+					padding: 5px 10px;
+					font-size: 16px;
+				}
+			}
+			&-list {
+				width: auto;
+				margin-bottom: 25px;
+				display: flex;
+				gap: 15px;
+				align-items: center;
+				&-img {
+					width: 25px;
+				}
+				&-a {
+					text-decoration: none;
+					font-size: 18px;
+					color: var(--primary-text);
+				}
+				&:hover {
+					filter: invert(53%) sepia(39%) saturate(1433%) hue-rotate(52deg)
+						brightness(94%) contrast(101%);
+					color: var(--primary);
+				}
+			}
+		}
+	}
+
+	.mobile_btn {
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: 27px;
+		cursor: pointer;
+		z-index: 10;
+	}
+}

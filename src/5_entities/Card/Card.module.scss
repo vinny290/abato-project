@@ -1,0 +1,16 @@
+@media (min-width: 340px) {
+	.BasicCard {
+		display: none;
+	}
+	.AdaptiveCard {
+		display: block;
+	}
+}
+@media (min-width: 1090px) {
+	.BasicCard {
+		display: block;
+	}
+	.AdaptiveCard {
+		display: none;
+	}
+}

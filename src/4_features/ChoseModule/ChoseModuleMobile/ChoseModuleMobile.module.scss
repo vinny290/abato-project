@@ -1,0 +1,14 @@
+.container {
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 5px;
+}
+.base {
+	height: 64px;
+}
+.mobile {
+	height: 32px;
+}

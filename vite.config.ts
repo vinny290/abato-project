@@ -1,9 +1,10 @@
-import react from '@vitejs/plugin-react'
-import vike from 'vike/plugin'
-import { UserConfig } from 'vite'
+import react from "@vitejs/plugin-react";
+import vike from "vike/plugin";
+import { UserConfig } from "vite";
 
 const config: UserConfig = {
-  plugins: [react(), vike()]
-}
+  plugins: [react(), vike()],
+};
 
-export default config
+// eslint-disable-next-line import/no-default-export
+export default config;

@@ -1,8 +1,8 @@
 import { MantineProvider } from "@mantine/core";
 import ChooseModule from "../../features/ChoseModule/ChoseModule";
 import HeaderReg from "../../entities/header/HeaderReg/HeaderReg";
-import ButtonBase from "../../shared/ui/Buttons/ButtonBase";
-import InputReg from "../../shared/ui/Inputs/InputsReg/InputReg";
+import ButtonBase from "../../shared/ui/legacy_components/Buttons/ButtonBase";
+import InputReg from "../../shared/ui/legacy_components/Inputs/InputsReg/InputReg";
 import "../main.css";
 import styles from "./Account.module.scss";
 

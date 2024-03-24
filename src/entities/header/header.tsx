@@ -1,6 +1,6 @@
 import cn from "classnames";
 
-import ButtonBase from "../../shared/ui/Buttons/ButtonBase";
+import ButtonBase from "../../shared/ui/legacy_components/Buttons/ButtonBase";
 import { DropCity } from "../DropCity/DropCity";
 import Modal from "./Modal/Modal";
 import styles from "./header.module.scss";

@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { useState } from "react";
-import ButtonChoose from "../../../shared/ui/ButtonChoose/ButtonChoose";
+import ButtonChoose from "../../../shared/ui/legacy_components/ButtonChoose/ButtonChoose";
 import styles from "./ChoseModuleMobile.module.scss";
 import { ChooseModuleMobileProps } from "./ChoseModuleMobile.props";
 

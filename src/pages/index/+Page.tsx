@@ -6,10 +6,10 @@ import { ColorSchemeToggle } from "../../features/ColorSchemeToggle/ColorSchemeT
 import Card from "../../entities/Card/Card";
 import Footer from "../../entities/Footer/Footer";
 import Header from "../../entities/header/header";
-import ButtonBase from "../../shared/ui/Buttons/ButtonBase";
-import { InputFltr } from "../../shared/ui/Inputs/InputFiltr/InputFiltr";
-import InputReg from "../../shared/ui/Inputs/InputsReg/InputReg";
-import TextInputLR from "../../shared/ui/Inputs/TextInput/TextInput";
+import ButtonBase from "../../shared/ui/legacy_components/Buttons/ButtonBase";
+import { InputFltr } from "../../shared/ui/legacy_components/Inputs/InputFiltr/InputFiltr";
+import InputReg from "../../shared/ui/legacy_components/Inputs/InputsReg/InputReg";
+import TextInputLR from "../../shared/ui/legacy_components/Inputs/TextInput/TextInput";
 import "../main.css";
 
 function Page() {

@@ -2,7 +2,7 @@
 import cn from "classnames";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import ButtonBase from "../../../shared/ui/Buttons/ButtonBase";
+import ButtonBase from "../../../shared/ui/legacy_components/Buttons/ButtonBase";
 import styles from "./Modal.module.scss";
 
 export default function Modal({ items }: ModalProps) {

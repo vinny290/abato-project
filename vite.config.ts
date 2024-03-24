@@ -1,10 +1,17 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import react from "@vitejs/plugin-react";
 import vike from "vike/plugin";
-import { UserConfig } from "vite";
+import { PluginOption, defineConfig } from "vite";
 
-const config: UserConfig = {
-  plugins: [react(), vike()],
-};
+export default defineConfig(() => {
+  const plugins: PluginOption[] = [react()];
 
-// eslint-disable-next-line import/no-default-export
-export default config;
+  if (!(process.env.STORYBOOK_RUNNING ?? false)) {
+    plugins.push(vike());
+  }
+
+  return {
+    plugins,
+  };
+});

@@ -3,5 +3,11 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "include": [".eslintrc.cjs", "vite.config.ts", "src/**/*", "server/**/*"]
+  "include": [
+    ".eslintrc.cjs",
+    "vite.config.ts",
+    "src/**/*",
+    "server/**/*",
+    ".storybook/**/*"
+  ]
 }

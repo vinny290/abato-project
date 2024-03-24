@@ -1,6 +1,6 @@
 import cn from "classnames";
 import React, { useState } from "react";
-import ButtonChoose from "../../shared/ui/ButtonChoose/ButtonChoose";
+import ButtonChoose from "../../shared/ui/legacy_components/ButtonChoose/ButtonChoose";
 import styles from "./ChoseModule.module.scss";
 import { ChooseModuleProps } from "./ChoseModule.props";
 

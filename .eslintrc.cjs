@@ -6,9 +6,10 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import/prefer-named-export": "off",
     "import/no-default-export": "error",
+    "react/jsx-props-no-spreading": "off",
   },
   reportUnusedDisableDirectives: true,
-  ignorePatterns: ["dist/*"],
+  ignorePatterns: ["dist/*", "src/shared/ui/legacy_components/*"],
   env: { browser: true, es2020: true, node: true },
   parserOptions: {
     ecmaVersion: "latest",
@@ -30,6 +31,15 @@ module.exports = {
     "airbnb-typescript",
     "airbnb/hooks",
     "prettier",
+    "plugin:storybook/recommended",
   ],
   parser: "@typescript-eslint/parser",
+  overrides: [
+    {
+      files: ["*.stories.tsx", "vite.config.ts"],
+      rules: {
+        "import/no-default-export": "off",
+      },
+    },
+  ],
 };

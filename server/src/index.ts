@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 // This file isn't processed by Vite, see https://github.com/vikejs/vike/issues/562
 // Consequently:
 //  - When changing this file, you needed to manually restart your server for your changes to take effect.
@@ -15,9 +16,8 @@ import express from "express";
 import compression from "compression";
 import { renderPage } from "vike/server";
 import { root } from "./root.js";
-const isProduction = process.env.NODE_ENV === "production";
 
-startServer();
+const isProduction = process.env.NODE_ENV === "production";
 
 async function startServer() {
   const app = express();
@@ -41,6 +41,7 @@ async function startServer() {
         server: { middlewareMode: true },
       })
     ).middlewares;
+
     app.use(viteDevMiddleware);
   }
 
@@ -56,20 +57,30 @@ async function startServer() {
     };
     const pageContext = await renderPage(pageContextInit);
     const { httpResponse } = pageContext;
+
     if (!httpResponse) {
       return next();
     } else {
       const { body, statusCode, headers, earlyHints } = httpResponse;
-      if (res.writeEarlyHints)
+
+      if (res.writeEarlyHints) {
         res.writeEarlyHints({ link: earlyHints.map((e) => e.earlyHintLink) });
+      }
+
       headers.forEach(([name, value]) => res.setHeader(name, value));
       res.status(statusCode);
       // For HTTP streams use httpResponse.pipe() instead, see https://vike.dev/stream
       res.send(body);
     }
+
+    return undefined;
   });
 
   const port = process.env.PORT || 3000;
+
   app.listen(port);
+
   console.log(`Server running at http://localhost:${port}`);
 }
+
+startServer();

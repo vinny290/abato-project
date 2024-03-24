@@ -13,7 +13,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: ["./tsconfig.eslint.json", "./tsconfig.*.json"],
+    project: ["./tsconfig.eslint.json"],
   },
   settings: {
     react: { version: "detect" },

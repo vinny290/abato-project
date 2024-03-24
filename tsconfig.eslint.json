@@ -3,5 +3,5 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "include": [".eslintrc.cjs"]
+  "include": [".eslintrc.cjs", "vite.config.ts", "src/**/*"]
 }
